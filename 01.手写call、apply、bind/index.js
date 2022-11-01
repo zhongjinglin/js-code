@@ -1,11 +1,11 @@
-Function.prototype._call = function(thisArg, ...args) {
+Function.prototype._call = function (thisArg, ...args) {
   const fn = this
   thisArg = thisArg === null || thisArg === undefined ? window : Object(thisArg)
   thisArg.fn = fn
   return thisArg.fn(...args)
 }
 
-Function.prototype._apply = function(thisArg, argArray = []) {
+Function.prototype._apply = function (thisArg, argArray = []) {
   const fn = this
   thisArg = thisArg === null || thisArg === undefined ? window : Object(thisArg)
   thisArg.fn = fn
